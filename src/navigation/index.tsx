@@ -4,23 +4,25 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { ColorSchemeName } from 'react-native';
 
 import { BottomTabNavigator } from './BottomTabNavigator';
+import { AuthStackNavigator } from './AuthStack';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
-  console.log(colorScheme)
   return (
     <NavigationContainer
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
+    >
+      <MainNavigator />
     </NavigationContainer>
   );
 }
 
 const Stack = createStackNavigator();
 
-function RootNavigator() {
+function MainNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Main" component={BottomTabNavigator} />
+      <Stack.Screen name="Auth" component={AuthStackNavigator} />
     </Stack.Navigator>
   );
 }

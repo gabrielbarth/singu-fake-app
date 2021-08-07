@@ -40,7 +40,7 @@ const TabMyAccountNavigator = () => {
             <TabMyAccountStack.Screen
                 name="MyAccount"
                 component={MyAccount}
-                options={{ headerShown: false }}
+                options={{ headerTitle: 'Minha conta' }}
             />
         </TabMyAccountStack.Navigator>
     );
@@ -53,7 +53,7 @@ const TabNotificationsNavigator = () => {
             <TabNotificationsStack.Screen
                 name="Notifications"
                 component={Notifications}
-                options={{  headerTitle: 'Notificações' }}
+                options={{ headerTitle: 'Notificações' }}
             />
         </TabNotificationsStack.Navigator>
     );

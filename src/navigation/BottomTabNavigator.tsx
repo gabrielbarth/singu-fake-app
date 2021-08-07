@@ -1,11 +1,11 @@
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-
-import { Icon } from '../components/Icon';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { colors } from '../constants/theme/styleGuide';
 import { EIconPack } from '../constants/enums/EIconPack';
+
+import { Icon } from '../components/Icon';
 
 import {
   TabServicesNavigator,

@@ -1,13 +1,23 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ImageBackground } from 'react-native';
+
+import wallpaperImg from '../../assets/manicureWallpaper.jpg';
+import { EnterAccount } from '../../components/EnterAccount';
 
 import { styles } from './styles';
 
-const MyAccount = () => {
+const MyAccount = ({ navigation }: any) => {
   return (
-    <View>
-      <Text> MyAccount screen </Text>
-    </View>
+    <ImageBackground
+      source={wallpaperImg}
+      style={styles.container}
+      blurRadius={1}
+      imageStyle={{ opacity: 0.6 }}
+    >
+      <View style={styles.content}>
+        <EnterAccount action={() => { navigation.navigate('Auth', { screen: 'SignIn' }) }} />
+      </View>
+    </ImageBackground>
   )
 }
 

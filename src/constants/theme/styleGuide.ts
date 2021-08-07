@@ -4,6 +4,7 @@ const tintColorDark = '#EFBA6A';
 // App general colors
 const colors = {
     primary: '#FF573E',
+    primaryLight: 'rgba(255, 87, 62, 0.3)',
     primaryGradientBottonLeft: '#FF573E',
     primaryGradientTopRight: '#EFBA6A',
 
@@ -30,18 +31,26 @@ const colors = {
 
 //extended StyleSheet - LIGHT MODE
 const lightTheme = {
+    $primary: colors.primary,
+    $primaryLight: colors.primaryLight,
+
     $fontColorDark: colors.light.textDark,
     $fontColorMedium: colors.light.textMedim,
     $fontColorLight: colors.light.textLight,
+    
     $bgColor: colors.light.background,
     $rem: 16,
 };
 
 //extended StyleSheet - DARK MODE
 const darkTheme = {
+    $primary: colors.primary,
+    $primaryLight: colors.primaryLight,
+
     $fontColorDark: colors.dark.textDark,
     $fontColorMedium: colors.dark.textMedim,
     $fontColorLight: colors.dark.textLight,
+
     $bgColor: colors.dark.background,
     $rem: 16,
 };

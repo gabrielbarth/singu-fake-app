@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { FontAwesome5, FontAwesome, Entypo } from '@expo/vector-icons';
+import { FontAwesome5, FontAwesome, Entypo, Ionicons, AntDesign } from '@expo/vector-icons';
 
 import { EIconPack } from '../../constants/enums/EIconPack';
 
@@ -25,6 +25,12 @@ const Icon = ({ pack, name, color, focused, size = 25}: IconComponentProps) => {
 
     if (pack == EIconPack.FONT_AWESOME)
         return <FontAwesome size={size} name={name} focused={focused} color={color} style={iconStyle} />;
+
+    if (pack == EIconPack.IONICONS)
+        return <Ionicons size={size} name={name} focused={focused} color={color} style={iconStyle} />;
+
+    if (pack == EIconPack.ANT_DESIGN)
+        return <AntDesign size={size} name={name} focused={focused} color={color} style={iconStyle} />;
 
     return <FontAwesome5 size={size} name={name} focused={focused} color={color}  style={iconStyle} />;
 }

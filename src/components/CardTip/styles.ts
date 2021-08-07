@@ -3,12 +3,18 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 const styles = EStyleSheet.create({
   container: {
     width: '10rem',
-    height: '8rem',
-    borderRadius: '0.5rem',
-    marginHorizontal: '2%',
-    marginVertical: '4%',
+    height: '7rem',
+    margin: '0.5rem',
     justifyContent: 'center',
-    padding: '1rem',
+    padding: '0.3rem',
+    alignItems: 'center'
+  },
+  card: {
+    width: '10rem',
+    height: '7rem',
+    borderRadius: '0.5rem',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 
